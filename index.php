@@ -16,11 +16,13 @@ require_once __DIR__ . '/models/Post.php';
 </head>
 
 <body>
-  <section id="movies">
+  <section>
+    <!-- CICLO FOREACH SU MOVIES -->
     <?php foreach ($movies as $movie) {
       $movie_obj = new Movies($movie['title'], $movie['gender'], $movie['year'], $movie['plot'], $movie['forAge']);
     ?>
       <article>
+        <!-- STAMPA  -->
         <h1>Titolo: <?= $movie_obj->title ?></h1>
         <p> Genere: <?= $movie_obj->gender ?></address>
         <p>Anno: <?= $movie_obj->year ?></p>
